@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 00:55:11 by sawang            #+#    #+#             */
-/*   Updated: 2023/08/21 17:27:13 by sawang           ###   ########.fr       */
+/*   Updated: 2023/08/21 17:49:33 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,11 @@ int	main(void)
 	std::cout << std::endl;
 
 	/**
-	 * ClapTrap copy constructor test
+	 * ClapTrap copy constructor and copy assignment operator test
 	*/
+	ScavTrap	a(ScavJim);
+
+	std::cout << std::endl;
 
 	return (0);
 }
