@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 00:55:11 by sawang            #+#    #+#             */
-/*   Updated: 2023/08/21 16:24:16 by sawang           ###   ########.fr       */
+/*   Updated: 2023/08/21 17:27:13 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,41 +17,39 @@
 
 int	main(void)
 {
-	ClapTrap	Jim("Jim");
-	ClapTrap	Bob("Bob");
-	ClapTrap	John("John");
-
-	Jim.setAttackDamage(5);
-	for (int i = 0; i < 4; i++)
-	{
-		Jim.attack("Bob");
-		Bob.takeDamage(Jim.getAttackDamage());
-		Bob.beRepaired(1);
-	}
-
-	std::cout << std::endl;
-
-	John.setAttackDamage(4);
-	for (int i = 0; i < 4; i++)
-	{
-		John.attack("Jim");
-		Jim.takeDamage(John.getAttackDamage());
-		Jim.beRepaired(1);
-		Jim.beRepaired(1);
-		Jim.beRepaired(1);
-		Jim.beRepaired(1);
-		Jim.beRepaired(1);
-		Jim.beRepaired(1);
-		Jim.beRepaired(1);
-	}
-
 	/**
 	 * ScavTrap test
 	*/
 	std::cout << std::endl;
 	ScavTrap	ScavJim("ScavJim");
 	ScavTrap	ScavBob("ScavBob");
-	ScavTrap	ScavJohn("ScavJohn");
+	ClapTrap	John("John");
+
+	std::cout << std::endl;
+
+	for (int i = 0; i < 6; i++)
+	{
+		ScavJim.attack("ScavBob");
+		if (i == 1)
+			ScavBob.guardGate();
+		ScavBob.takeDamage(ScavJim.getAttackDamage());
+		ScavBob.beRepaired(1);
+	}
+
+	std::cout << std::endl;
+
+	// for (int i = 0; i < 4; i++)
+	// {
+		John.attack("ScavJim");
+		ScavJim.takeDamage(John.getAttackDamage());
+		ScavJim.beRepaired(1);
+	// }
+
+	std::cout << std::endl;
+
+	/**
+	 * ClapTrap copy constructor test
+	*/
 
 	return (0);
 }
