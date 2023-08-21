@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 00:55:11 by sawang            #+#    #+#             */
-/*   Updated: 2023/08/20 00:55:11 by sawang           ###   ########.fr       */
+/*   Updated: 2023/08/21 17:42:42 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(void)
 	}
 
 	std::cout << std::endl;
-	
+
 	John.setAttackDamage(4);
 	for (int i = 0; i < 4; i++)
 	{
@@ -43,6 +43,12 @@ int	main(void)
 		Jim.beRepaired(1);
 		Jim.beRepaired(1);
 	}
+
+	std::cout << std::endl;
+	/**
+	 * ClapTrap copy constructor and copy assignment operator test
+	*/
+	const ClapTrap a(Jim);
 
 	return (0);
 }
