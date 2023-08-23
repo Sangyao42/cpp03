@@ -53,6 +53,8 @@ int	main(void)
 	ScavTrap	a(ScavJim);
 	std::cout << a.getAttackDamage() << std::endl;
 
+	a = a;
+
 	std::cout << std::endl;
 
 	return (0);
