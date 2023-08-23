@@ -51,6 +51,7 @@ int	main(void)
 	 * ClapTrap copy constructor and copy assignment operator test
 	*/
 	ScavTrap	a(ScavJim);
+	std::cout << a.getAttackDamage() << std::endl;
 
 	std::cout << std::endl;
 
