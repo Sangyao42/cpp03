@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 00:05:45 by sawang            #+#    #+#             */
-/*   Updated: 2023/10/24 22:48:02 by sawang           ###   ########.fr       */
+/*   Updated: 2023/10/25 12:32:36 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ class ClapTrap
 		unsigned int	_attackDamage;
 };
 
-//test
-std::ostream &operator<<(std::ostream &o, ClapTrap const &toPrint);
+std::ostream &operator<<(std::ostream &o, const ClapTrap &toPrint);
 
 #endif

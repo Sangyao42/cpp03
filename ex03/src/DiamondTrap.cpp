@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:40:32 by sawang            #+#    #+#             */
-/*   Updated: 2023/10/24 22:37:30 by sawang           ###   ########.fr       */
+/*   Updated: 2023/10/25 13:03:01 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,8 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap(), _name("DiamondT
 	std::cout << "DiamondTrap default constructor is called." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), ScavTrap(name), FragTrap(name), _name(name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), _name(name)
 {
-	this->ClapTrap::_name = this->_name + "_clap_name";
 	ScavTrap originalScavTrap;
 	this->_energyPoints = originalScavTrap.getEnergyPoints();
 	FragTrap originalFragTrap;

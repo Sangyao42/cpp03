@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 00:21:07 by sawang            #+#    #+#             */
-/*   Updated: 2023/10/24 22:55:45 by sawang           ###   ########.fr       */
+/*   Updated: 2023/10/25 12:23:56 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,7 @@ unsigned int	ClapTrap::getEnergyPoints(void) const
 	return (this->_energyPoints);
 }
 
-//test
+//printing
 std::ostream &operator<<(std::ostream &o, ClapTrap const &toPrint)
 {
 	o << "hitPoints: " << toPrint.getHitPoints() << std::endl;

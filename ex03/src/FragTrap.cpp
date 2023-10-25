@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 13:05:37 by sawang            #+#    #+#             */
-/*   Updated: 2023/10/24 19:51:55 by sawang           ###   ########.fr       */
+/*   Updated: 2023/10/25 13:02:51 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ FragTrap::FragTrap(): ClapTrap()
 FragTrap::FragTrap(const std::string name): ClapTrap(name)
 {
 	std::cout << "FragTrap " << name << " is born!" << std::endl;
-	this->_name = name;
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
