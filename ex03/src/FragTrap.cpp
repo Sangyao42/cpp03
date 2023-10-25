@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 13:05:37 by sawang            #+#    #+#             */
-/*   Updated: 2023/10/25 13:02:51 by sawang           ###   ########.fr       */
+/*   Updated: 2023/10/25 13:42:20 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 FragTrap &FragTrap::operator=(const FragTrap &rhs)
 {
 	std::cout << "FragTrap copy assignment is called." << std::endl;
-	ClapTrap::operator=(rhs);
+	if (this != &rhs)
+		ClapTrap::operator=(rhs);
 	return (*this);
 }
 

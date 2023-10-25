@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 15:43:02 by sawang            #+#    #+#             */
-/*   Updated: 2023/10/25 12:28:38 by sawang           ###   ########.fr       */
+/*   Updated: 2023/10/25 13:41:41 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)
 ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
 {
 	std::cout << "ScavTrap copy assignment is called." << std::endl;
-	ClapTrap::operator=(rhs);
+	if (this != &rhs)
+		ClapTrap::operator=(rhs);
 	return (*this);
 }
 
