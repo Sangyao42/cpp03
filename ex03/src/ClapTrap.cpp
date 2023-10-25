@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 00:21:07 by sawang            #+#    #+#             */
-/*   Updated: 2023/10/25 12:23:56 by sawang           ###   ########.fr       */
+/*   Updated: 2023/10/25 13:22:17 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ ClapTrap::~ClapTrap()
 
 void	ClapTrap::attack(const std::string &target)
 {
-	std::cout << "testClap" << std::endl;
 	if (this->_hitPoints == 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " is already dead! Cannot attack!" << std::endl;

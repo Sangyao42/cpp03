@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 15:43:02 by sawang            #+#    #+#             */
-/*   Updated: 2023/10/25 13:02:55 by sawang           ###   ########.fr       */
+/*   Updated: 2023/10/25 13:24:44 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::attack(const std::string &target)
 {
-	std::cout << "testScav" << std::endl;
 	if (this->_hitPoints == 0)
 	{
 		std::cout << "ScavTrap " << this->_name << " is already dead! Cannot attack!" << std::endl;
